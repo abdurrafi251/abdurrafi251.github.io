@@ -143,12 +143,18 @@ nilai Y dan X kita dapatkan dari data
 
 ### Pembahasan masalah
 
-Berikut adalah hasil dari plot x dan y. dengan x sebagai nilai(value) ekpor kopi Indonesia dan y sebagai kuanitas ekpor kopi Indonesia. maka didapatkan plot sebagai berikut :
+Berikut adalah hasil dari plot x dan y, dengan x sebagai kuantitas ekpor kopi Indonesia dan y sebagai nilai (value) ekpor kopi Indonesia. maka didapatkan plot sebagai berikut :
 
 ```{r}
-library(readxl)
-dat<-read_excel("latihan3.xlsx")
-plot(dat$X,dat$Y,xlab="VALUE",ylab="QUANTITY")
+dat<-read_excel('latihan3.xlsx')
+library(ggplot2)
+ggplot(data=dat, aes(x=X, y=Y))+
+  geom_point(color='blue', size=2)+
+  labs(title="Tabel 1. Plot Terhadap Nilai Ekspor kopi Indonesia",
+       x="Kuantitas",
+       y="Nilai Ekspor",
+       caption = "Sumber: ITC Trade Map") +
+  theme_classic()
 ```
 
 ### Analisis masalah
