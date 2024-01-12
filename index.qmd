@@ -59,8 +59,7 @@ b. **Manfaat Praktis:**
 Packages yang digunakan dalam laporan ini antara lain sebagai berikut:
 
 ```{r}
-#| warning: false
-#| echo: true
+setwd("C:/Users/dnura/Documents/METOPEL UAS/ABDUR RAFI METOPEL")
 library(tidyverse)
 library(readxl)
 library(WDI)
